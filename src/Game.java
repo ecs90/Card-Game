@@ -32,13 +32,27 @@ public class Game implements Observer{
                 winner = i;
             }
         }
-        System.out.println("The winner of the row is Player "+winner);
+        System.out.println("The winner of the row is " + players.get(winner).getName());
         int points = this.players.get(winner).getPoints();
         this.players.get(winner).setPoints(points+1);
     }
 
+    public void row(){
+        this.deal();
+        this.play();
+    }
+
     @Override
     public void update(Observable o, Object arg) {
+        Player player = (Player) o;
 
+        if(arg instenceof Card){
+            Card card = (Card) arg;
+
+            player.setPoints(player.getPoints() + card.getNumber());
+            System.out.println(player.getName() + " has received " + card);
+        }else{
+            System.out.println(player.getName() + " has now " + player.getPoints() + " points");
+        }
     }
 }

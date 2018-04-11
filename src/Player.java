@@ -13,13 +13,13 @@ public class Player extends Observable implements Runnable{
     public synchronized void setPlayable(Card playable) {
         this.playable = playable;
         setChanged();
-        notifyObservers();
+        notifyObservers(this.playable);
     }
 
     public void setPoints(int points) {
         this.points = points;
         setChanged();
-        notifyObservers();
+        notifyObservers(this.points);
     }
 
     public Card getPlayable() {
