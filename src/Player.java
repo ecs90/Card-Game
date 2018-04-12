@@ -40,4 +40,8 @@ public class Player extends Observable implements Runnable{
     public void run() {
 
     }
+
+    public ArrayList<Card> getPlayables() {
+        return this.playable;
+    }
 }

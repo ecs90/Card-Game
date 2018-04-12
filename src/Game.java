@@ -48,11 +48,17 @@ public class Game implements Observer{
     }
 
     public void winner(){
-        int winner = 0;
         int points = 0;
         for(Player player : players){
             if(player.getPoints()>points){
                 points = player.getPoints();
+            }
+        }
+        for(Player player : players){
+            if(points == player.getPoints()){
+                System.out.println("The winner of the game is " + player.getName() + " with "
+                        + player.getPoints() + " points");
+                Bdd.saveWinner(player);
             }
         }
     }
@@ -66,6 +72,7 @@ public class Game implements Observer{
         while(deck.anyCardLeft()){
             row();
         }
+        this.winner();
     }
 
     @Override
