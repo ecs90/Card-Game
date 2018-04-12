@@ -23,6 +23,7 @@ public class Deck {
         while(!this.usedCard.isEmpty()) {
             this.gameCard.push(this.usedCard.get(0));
             this.usedCard.remove(0);
+
         }
     }
 
