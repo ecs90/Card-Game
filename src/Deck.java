@@ -7,7 +7,7 @@ public class Deck {
     private ArrayList<Card> usedCard = new ArrayList<Card>();
 
     public Deck(){
-        for (int i = 1; i < 13; i++) {
+        for (int i = 1; i < 14; i++) {
             Spades spades = new Spades(i);
             this.usedCard.add(spades);
             Hearts hearts = new Hearts(i);

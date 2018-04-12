@@ -7,6 +7,7 @@ public class Game implements Observer{
     private Deck deck;
 
     public Game(Player player1, Player player2, Player player3, Player player4, Deck deck) {
+        this.players = new ArrayList<>();
         this.players.add(player1);
         this.players.add(player2);
         this.players.add(player3);
@@ -26,15 +27,19 @@ public class Game implements Observer{
     }
 
     public void play(){
-        int winner = 0;
-        for(int i = 1; i<4; i++){
-            if(this.players.get(winner).getPlayable().getNumber()<this.players.get(i).getPlayable().getNumber()){
-                winner = i;
+        int number = 0;
+        for(Player player : players){
+            if(number <= player.getPlayable().getNumber()){
+                number = player.getPlayable().getNumber();
             }
         }
-        System.out.println("The winner of the row is " + players.get(winner).getName());
-        int points = this.players.get(winner).getPoints();
-        this.players.get(winner).setPoints(points+1);
+        for(int i = 0; i<4; i++){
+            if(this.players.get(i).getPlayable().getNumber()==number){
+                System.out.println("The winner of the row is " + players.get(i).getName());
+                int points = this.players.get(i).getPoints();
+                this.players.get(i).setPoints(points+1);
+            }
+        }
     }
 
     public void row(){
@@ -42,15 +47,25 @@ public class Game implements Observer{
         this.play();
     }
 
+    public void startGame(){
+        for(Player player: players){
+            player.addObserver(this);
+            new Thread(player).start();
+        }
+
+        while(deck.anyCardLeft()){
+            row();
+        }
+    }
+
     @Override
     public void update(Observable o, Object arg) {
         Player player = (Player) o;
 
-        if(arg instenceof Card){
+        if(arg instanceof Card){
             Card card = (Card) arg;
 
-            player.setPoints(player.getPoints() + card.getNumber());
-            System.out.println(player.getName() + " has received " + card);
+            System.out.println(player.getName() + " has received " + card.toString());
         }else{
             System.out.println(player.getName() + " has now " + player.getPoints() + " points");
         }
