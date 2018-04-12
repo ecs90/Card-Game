@@ -9,13 +9,13 @@ public class Deck {
     public Deck(){
         for (int i = 1; i < 14; i++) {
             Spades spades = new Spades(i);
-            this.usedCard.add(spades);
+            this.disCard(spades);
             Hearts hearts = new Hearts(i);
-            this.usedCard.add(hearts);
+            this.disCard(hearts);
             Diamonds diamonds = new Diamonds(i);
-            this.usedCard.add(diamonds);
+            this.disCard(diamonds);
             Clubs clubs = new Clubs(i);
-            this.usedCard.add(clubs);
+            this.disCard(clubs);
         }
 
         Collections.shuffle(usedCard);
@@ -38,7 +38,5 @@ public class Deck {
         return !this.gameCard.empty();
     }
 
-    public void disCardAll(ArrayList<Card> card){
-        this.usedCard.addAll(card);
-    }
+    // public void disCardAll(ArrayList<Card> card){ this.usedCard.addAll(card); }
 }

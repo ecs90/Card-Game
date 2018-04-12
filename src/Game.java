@@ -47,6 +47,16 @@ public class Game implements Observer{
         this.play();
     }
 
+    public void winner(){
+        int winner = 0;
+        int points = 0;
+        for(Player player : players){
+            if(player.getPoints()>points){
+                points = player.getPoints();
+            }
+        }
+    }
+
     public void startGame(){
         for(Player player: players){
             player.addObserver(this);

@@ -1,5 +1,3 @@
-import java.util.HashMap;
-
 public class Card {
     private int number;
 
@@ -11,8 +9,21 @@ public class Card {
         return number;
     }
 
+    public String changer(){
+        if(this.number == 1){
+            return "A";
+        }else if(this.number == 11){
+            return "J";
+        }else if(this.number == 12){
+            return "Q";
+        }else if(this.number == 13){
+            return "K";
+        }
+        return "" + this.number;
+    }
+
     @Override
     public String toString() {
-        return ""+ this.number;
+        return changer();
     }
 }
