@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb6ca00c-a8ce-4387-a7d0-c1fa215016d5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Card.java" afterPath="$PROJECT_DIR$/src/Card.java" />
-      <change beforePath="$PROJECT_DIR$/src/Deck.java" afterPath="$PROJECT_DIR$/src/Deck.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -360,12 +356,20 @@
       <workItem from="1523481459402" duration="11113000" />
       <workItem from="1523499707636" duration="205000" />
       <workItem from="1523500398182" duration="3098000" />
-      <workItem from="1523504067456" duration="315000" />
+      <workItem from="1523504067456" duration="651000" />
     </task>
+    <task id="LOCAL-00001" summary="lkjh">
+      <created>1523504491374</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1523504491375</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22041000" />
+    <option name="totallyTimeSpent" value="22377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -409,6 +413,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/Card-Game" />
     </ignored-roots>
+    <MESSAGE value="lkjh" />
+    <option name="LAST_COMMIT_MESSAGE" value="lkjh" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
